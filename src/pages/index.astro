@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import Sidenav from "../components/Sidenav.astro";
+import About from "../components/About.astro";
+---
+
+<Layout
+  title="Th3CodeWizard portfolio"
+  description="This is a software developer portfolio made with astro"
+>
+  <Header />
+  <Sidenav />
+  <main>
+    <Hero />
+    <About />
+  </main>
+</Layout>

@@ -1,0 +1,53 @@
+---
+import GithubIcon from "../components/icons/GithubIcon.astro";
+import LinkedinIcon from "../components/icons/LinkedinIcon.astro";
+const socialLinks = [
+  ["https://github.com/Th3C0deWizard", GithubIcon, "Github"],
+  [
+    "www.linkedin.com/in/carlos-andres-paez-chitiva-0a606a2b8",
+    LinkedinIcon,
+    "Linkedin",
+  ],
+];
+---
+
+<section
+  class="flex flex-col justify-center h-[calc(100dvh-3.3rem)] pl-20 "
+>
+  <h1
+    class="text-[5rem] mb-5 font-bold animate-fade-right animate-delay-300 w-fit"
+  >
+    Hello!, I'm
+    <strong
+      class="bg-gradient-to-r from-mauve via-red to-peach text-transparent bg-clip-text animate-bounce"
+    >
+      Carlos Chitiva
+    </strong>
+  </h1>
+  <p
+    class="text-2xl font-medium pl-2 animate-fade-right animate-delay-500 w-fit mb-8"
+  >
+    Software <strong class="text-mauve">Developer</strong>, <strong
+      class="text-red">Engineer</strong
+    > and <strong class="text-peach">passionate</strong>. What challenges do you
+    have for me?
+  </p>
+  <div class="pl-2 animate-fade-right animate-delay-700 w-fit">
+    {
+      socialLinks.map(([url, Icon, text]) => {
+        return (
+          <a
+            class="group text-green inline-flex items-center gap-x-2 rounded-full bg-surface2 py-2 pl-2 pr-6 font-bold text-xl hover:text-green hover:scale-110 mr-4 transition-transform duration-700"
+            href={url}
+            target="_blank"
+          >
+            <span>
+              <Icon class="size-8 group-hover:fill-peach" />
+            </span>
+            {text}
+          </a>
+        );
+      })
+    }
+  </div>
+</section>

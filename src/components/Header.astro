@@ -1,0 +1,27 @@
+---
+const linksData = [
+  ["#about", "About"],
+  ["#exp", "Experience"],
+  ["#education", "Education"],
+  ["#projects", "Projects"],
+];
+
+const linksStyle =
+  "flex justify-center items-center pt-5 text-2xl hover:scale-110 transition-transform duration-500 bg-gradient-to-r from-green via-teal to-lavender hover:text-transparent bg-clip-text";
+---
+
+<header id="home">
+  <nav class="flex justify-center">
+    <ul class="flex gap-x-8">
+      {
+        linksData.map(([url, text]) => (
+          <li>
+            <a class={linksStyle} href={url}>
+              {text}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>
