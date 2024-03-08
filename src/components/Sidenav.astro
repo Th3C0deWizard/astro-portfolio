@@ -5,24 +5,31 @@ import ExpIcon from "./icons/ExpIcon.astro";
 import EducationIcon from "./icons/EducationIcon.astro";
 import ProjectsIcon from "./icons/ProjectsIcon.astro";
 const linksData = [
-  ["#home", HomeIcon],
-  ["#about", AboutIcon],
-  ["#exp", ExpIcon],
-  ["#education", EducationIcon],
-  ["#projects", ProjectsIcon],
+  ["#home", HomeIcon, true],
+  ["#about", AboutIcon, false],
+  ["#exp", ExpIcon, false],
+  ["#education", EducationIcon, false],
+  ["#projects", ProjectsIcon, false],
 ];
 ---
 
 <aside class="fixed right-0 h-screen flex flex-col justify-center">
   <nav>
-    <ul class="flex flex-col items-center gap-y-8 relative px-4 animate-pulse animate-infinite animate-delay-1000 animate-duration-[3s] hover:animate-none">
-      <div class="absolute top-4 bottom-4 border-[5px] border-surface2 z-[-1]"></div>
+    <ul
+      class="flex flex-col items-center gap-y-8 relative px-4 animate-pulse animate-infinite animate-delay-1000 animate-duration-[3s] hover:animate-none"
+    >
+      <div class="absolute top-4 bottom-4 border-[5px] border-surface2 z-[-1]">
+      </div>
       {
-        linksData.map(([url, Icon]) => {
+        linksData.map(([url, Icon, current]) => {
           return (
-            <li class="">
-              <a class="group block rounded-full bg-surface2 p-2 z-10 hover:scale-125 transition-transform duration-700" href={url}>
-                <Icon class="size-8 fill-text group-hover:fill-mauve" />
+            <li>
+              <a
+                class="group block rounded-full bg-surface2 p-2 z-10 hover:scale-125 transition-transform duration-700 data-[current='true']:bg-yellow"
+                href={url}
+                data-current={current.toString()}
+              >
+                <Icon class="size-8 fill-text group-hover:fill-mauve group-data-[current='true']:fill-mauve" />
               </a>
             </li>
           );

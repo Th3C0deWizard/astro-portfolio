@@ -1,4 +1,52 @@
+---
+import Carousel from "../components/Carousel.astro";
+import ReactIcon from "../components/icons/ReactIcon.astro";
+import VueIcon from "../components/icons/VueIcon.astro";
+import HTMLIcon from "../components/icons/HTMLIcon.astro";
+import JavascriptIcon from "./icons/JavascriptIcon.astro";
+import CssIcon from "./icons/CSSIcon.astro";
+import AstroIcon from "./icons/AstroIcon.astro";
+---
 
-<section id="about" class="h-screen">
-  
+<section id="about" class="min-h-screen p-20 box-border">
+  <h2 class="text-6xl font-bold w-fit mx-auto mb-10">
+    <strong
+      class="bg-gradient-to-r from-sky via-lavender to-green text-transparent bg-clip-text"
+      >A little bit about me</strong
+    >
+  </h2>
+  <p class="text-xl font-medium w-[60%] mx-auto mb-10">
+    Welcome to my portfolio!, I'm Carlos Chitiva a software developer based in
+    Colombia with one year of experience building custom websites and reliable
+    solutions for business or personal needs. I've built several web apps using
+    modern technologies such as: React, Vue, Node.js, Express.js, relational
+    databases and document databases like Mongodb, among others.
+  </p>
+  <h3 class="text-5xl font-bold mb-10 w-fit mx-auto">
+    <strong
+      class="bg-gradient-to-r from-peach vial-yellow to-mauve text-transparent bg-clip-text"
+    >
+      My interests
+    </strong>
+  </h3>
+  <p class="text-xl font-medum w-[60%] mx-auto mb-10">
+    Computational science is an important part of my life, I enjoy the learning
+    process that comes with it and how it is in constant evolution. Techonolgy
+    has always seem impresive to me, and now and realy interested in artifitial
+    intelligence, machine learning and data science.
+  </p>
+  <h3 class="text-5xl font-bold mb-10 w-fit mx-auto">
+    <strong
+      class="bg-gradient-to-r from-peach vial-yellow to-mauve text-transparent bg-clip-text"
+      >Skills</strong
+    >
+  </h3>
+  <Carousel>
+    <HTMLIcon class="size-[13rem]" />
+    <JavascriptIcon class="size-[13rem]" />
+    <CssIcon class="size-[13rem]" />
+    <ReactIcon class="size-[13rem]" />
+    <VueIcon class="size-[13rem]"/>
+    <AstroIcon class="size-[13rem]"/>
+  </Carousel>
 </section>

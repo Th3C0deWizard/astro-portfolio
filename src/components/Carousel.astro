@@ -1,0 +1,22 @@
+---
+import ArrowLeftIcon from "../components/icons/ArrowLeftIcon.astro";
+import ArrowRightIcon from "../components/icons/ArrowRightIcon.astro";
+---
+
+<div class="group flex items-center gap-x-8">
+  <button
+    class="group bg-surface1 rounded-full p-3 hover:scale-110 hover:bg-yellow transition-transform duration-700"
+  >
+    <ArrowLeftIcon class="fill-green group-hover:fill-mauve" />
+  </button>
+  <div
+    class="flex justify-center items-center gap-x-10 group-has-[button:hover]:animate-pulse peer-hover:animate-once overflow-auto scroll-smooth [scrollbar-width:none] flex-grow"
+  >
+    <slot />
+  </div>
+  <button
+    class="group bg-surface1 rounded-full p-3 hover:scale-110 hover:bg-yellow transition-transform duration-700"
+  >
+    <ArrowRightIcon class="fill-green group-hover:fill-mauve" />
+  </button>
+</div>
